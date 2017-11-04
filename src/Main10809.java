@@ -6,20 +6,14 @@ import java.util.Scanner;
 		
 				Scanner scanner = new Scanner(System.in);
 	
-				String input = scanner.next();
+				// 사용자로부터 단어를 입력받음.
+				String word = scanner.next();
 		
-				// A(a) - Z(z) 의 개수(26) 배열 선언
-				int[] alpha = new int[26];
-		
-				// 알파벳 배열(alpha)의 아스키코드 값 – a(97) 번째 값을 올림
-				// ex) charAt(0)이 j라면 j(106) – a(97) = 9
-				for(int i = 0; i < input.length(); i ++){
-					alpha[input.charAt(i) - 'a'] ++;
+				// a의 아스키 코드 : 97, z의 아스키 코드 : 122
+				for (char i = 97; i <= 122 ; i++) {
+					System.out.print(word.indexOf(i) + " ");
 				}
-		
-				for(int i = 0; i < alpha.length; i ++){
-					 System.out.print(alpha[i] + " ");
-				}
+					
 		}
 
 }
